@@ -14,18 +14,21 @@ void bubble_sort(int *array, size_t size)
 	size_t tmp, i;
 	int permuted;
 
-	do {
-		permuted = 0;
-		for (i = 0; i <= size - 1; ++i)
-		{
-			if (array[i - 1] > array[i])
+	if (size >= 2)
+	{
+		do {
+			permuted = 0;
+			for (i = 0; i <= size - 1; ++i)
 			{
-				tmp = array[i - 1];
-				array[i - 1] = array[i];
-				array[i] = tmp;
-				permuted = 1;
-				print_array(array, size);
+				if (array[i - 1] > array[i])
+				{
+					tmp = array[i - 1];
+					array[i - 1] = array[i];
+					array[i] = tmp;
+					permuted = 1;
+					print_array(array, size);
+				}
 			}
-		}
-	} while (permuted);
+		} while (permuted);
+	}
 }
