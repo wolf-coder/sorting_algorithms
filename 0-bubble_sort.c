@@ -14,11 +14,6 @@ void bubble_sort(int *array, size_t size)
 	size_t tmp, i;
 	int permuted;
 
-	if (size == 1)
-	{
-		print_array(array, size);
-		return;
-	}
 	do {
 		permuted = 0;
 		for (i = 0; i <= size - 1; ++i)
