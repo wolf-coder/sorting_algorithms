@@ -18,12 +18,12 @@ void insertion_sort_list(listint_t **list)
 	listint_t *h = *list;
 	size_t n = 0;
 
-	while (*list &&  h != NULL)
+	while (h != NULL)
 	{
 		n++;
 		h = h->next;
 	}
-	if (*list && n >= 2)
+	if (n >= 2)
 	{
 		Element = (*list)->next;
 		while (Element)
@@ -51,5 +51,6 @@ void insertion_sort_list(listint_t **list)
 			}
 			Element = Element->next;
 		}
-	}
+	} else
+		return;
 }
