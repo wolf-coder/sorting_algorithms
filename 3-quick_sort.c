@@ -64,7 +64,8 @@ void quick_sort(int *array, size_t size)
 	int pivot = size - 1;
 	int r = 0;
 
-	
+	if (!size || !array)
+		return;
 	if (size >= 2)
 	{
 		r = organize(array, pivot);
